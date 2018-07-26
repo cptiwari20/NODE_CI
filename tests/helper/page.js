@@ -40,7 +40,7 @@ class CustomPage {
   // we can also create some methods for get and post requests for fetch api's
 
   get(path) {
-    return this.page.evaluate(({_path}) => {
+    return this.page.evaluate( (_path) => {
       return fetch(_path, {
         method: 'GET',
         credentials: 'same-origin',
@@ -54,7 +54,7 @@ class CustomPage {
   post(path, data) {
     return this.page.evaluate(
       (_path, _data) => {
-        return fetch(_path, {
+        return fetch( _path, {
           method: 'POST',
           credentials: 'same-origin',
           headers: {
